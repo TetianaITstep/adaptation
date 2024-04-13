@@ -1,0 +1,217 @@
+:root{
+    --main_text: #2F3035;
+    --accent_color: #1C62CD;
+    --base_color: #F0F0F4;
+    --light_gray_text: #c4c4c4;
+    --white_color: #ffff;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+}
+
+.body{
+    width: 100vw;
+    height: 100vh;
+    color: var(--main_text);
+}
+
+/* .container{
+    width: 80%;
+    height: 100%;
+         margin: 0 auto;
+         background-color: blueviolet;
+}
+
+@media (min-width: 900px){
+    .container{
+        background-color: brown;
+    }
+}
+
+@media (max-width: 500px){
+    .container{
+        background-color: green;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 800px){
+    .container{
+        background-color: black;
+    }
+} */
+
+
+.header,
+.burger_menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.burger_menu{
+    padding: 20px;
+    z-index: 3;
+}
+
+.logo_text{
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.burger_nav {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    left: -80%;
+    background-color: var(--main_text);
+    width: 80%;
+    height: 100%;
+    transition: opacity 0.3s ease; /* Added transition property */
+}
+
+.burger_nav ul li {
+    color: var(--white_color);
+    padding: 15px;
+    border-bottom: 1px solid var(--white_color);
+}
+
+.burger_menu:hover + .burger_nav {
+    left: 0;
+    opacity: 1; /* Make the element fully opaque on hover */
+}
+
+.banner_box{
+    width: 100vw;
+    height: 50vw;
+    background-image: url("./img/scooter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.backdrop{
+    width: 100%;
+    height: 100%;
+    background-color: #0000008e;
+    display: flex;
+    align-items: flex-end;
+}
+.banner_text{
+    color: var(--white_color);
+    font-size: 26px;
+    font-weight: 600;
+    position: absolute;
+    top: 113px;
+    right: 213px;
+    text-align: center;
+}
+
+.pagination{
+   width: 71px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0 auto;
+}
+
+.pagination li{
+    width: 7px;
+    height: 7px;
+    color: var(--white_color);
+    border-radius: 50%;
+    border: 1px solid var(--white_color);
+    margin-bottom: 20px;
+}
+
+
+.promotion{
+    width: 80%;
+    border: 1px solid var(--light_gray_text);
+    margin: 0 auto;
+    margin-top: 40px;
+    flex-direction: column;
+    justify-content: center;
+}
+.promo_price{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     color: var(--accent_color);
+     font-size: 27px;
+     font-weight: 700;
+     padding-right: 8px;
+}
+
+.promo_price span{
+    padding: 8px 20px;
+    background-color: var(--accent_color);
+    text-transform: uppercase;
+    color: white;
+}
+
+.old_price{
+    width: 100%;
+    text-align: right;
+    padding-right: 8px;
+    text-decoration: line-through;
+    color: var(--light_gray_text);
+    font-size: 18px;
+
+}
+
+.motor{
+    display: flex;
+  
+}
+.promo_good_name{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+
+}
+
+.promo_condition{
+  width: 100%;
+  padding: 25px 20px;
+  background-color: var(--base_color);
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+
+
+}
+
+.promo_condition span{
+    color: #1C62CD;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+.goods_category{
+    width: 100%;
+    
+}
+
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.filter p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.filter p:hover{
+    border-bottom: 2px solid var(--accent_color);
+}
